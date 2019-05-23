@@ -1,0 +1,28 @@
+.title-bar {
+    background-color: darkblue;
+    color: white;
+    padding: 25px;
+}
+
+.favorites-bar {
+    widows: 100%;
+    background-color: darkblue;
+    color: white;
+    padding: 25px;
+}
+
+.cover-image {
+    width: 25%;
+    /*float: left;*/
+    /*height: 500px;*/
+    /*width: 200px;*/
+}
+
+.book-info {
+    /*float: right;*/
+    width: 75%;
+}
+
+.favorite-column {
+
+}

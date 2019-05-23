@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoodReads</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class ="title-bar">
+            <h1>Welcome to GoodReads!</h1>
+            <h3>Search for any book!</h3>
+        </div>
+        <div class ="current-book">
+            <div v-if="loading">
+                <p>Loading...</p>
+            </div>
+            <div v-else>
+                <p>Enter the title (or key word) of a book</p>
+                <form v-on:submit.prevent="openLibrary">
+                    <input type="text" v-model="userInput">
+                    <button v-on:click="submit">Go!</button>
+                    <br><br>
+                </form>
+                <div class="cover-image">
+                        <img src="dragon.jpg" style="width:300px;height:400px">
+                        <!--{{current.img}}-->
+                    <!--<div class="book-info">-->
+                </div>
+                <div class="book-info">
+                        <h2>Inheritance
+                        <!--{{current.title}}-->
+                        </h2>
+                        <h3>Christopher Paolini
+                            <!--{{current.author}}-->
+                        </h3>
+                        <p>Publish date: <br>
+                            -- November 8th, 2011
+                            <!--{{current.date}}-->
+                        </p>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="favorites-bar">
+            <h2>Your Favorites:</h2>
+        </div>
+        <div class="favorite-column">
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&callback=mycallback"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
